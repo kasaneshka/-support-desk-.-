@@ -1,0 +1,159 @@
+{
+  "label": "small",
+  "repeats": 20,
+  "account": "agent1",
+  "env": {
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cores": 12,
+    "memory_gb": 7.6,
+    "python": "3.14.4",
+    "postgres": "16.15",
+    "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "counts_before": {
+    "users": 50,
+    "categories": 5,
+    "tickets": 300,
+    "comments": 876
+  },
+  "counts_after": {
+    "users": 50,
+    "categories": 5,
+    "tickets": 321,
+    "comments": 897
+  },
+  "results": [
+    {
+      "operation": "POST /api/login",
+      "p50": 27.113935499073705,
+      "p95": 31.512277000729227,
+      "max": 32.31283099921711,
+      "server_ms": 24.935000000000002,
+      "db_ms": 1.14,
+      "code_ms": 23.795,
+      "queries": 1.0,
+      "bytes": 75
+    },
+    {
+      "operation": "GET /api/me",
+      "p50": 4.525680499682494,
+      "p95": 7.643077999091474,
+      "max": 7.960937999087037,
+      "server_ms": 2.86,
+      "db_ms": 1.0150000000000001,
+      "code_ms": 1.8449999999999998,
+      "queries": 1.0,
+      "bytes": 75
+    },
+    {
+      "operation": "POST /api/logout",
+      "p50": 1.843168999585032,
+      "p95": 2.469116001520888,
+      "max": 3.1983680000848835,
+      "server_ms": 0.495,
+      "db_ms": 0.0,
+      "code_ms": 0.495,
+      "queries": 0.0,
+      "bytes": 0
+    },
+    {
+      "operation": "GET /api/categories",
+      "p50": 8.253320001131215,
+      "p95": 11.974380999163259,
+      "max": 14.632952999818372,
+      "server_ms": 5.805,
+      "db_ms": 2.4400000000000004,
+      "code_ms": 3.3649999999999993,
+      "queries": 2.0,
+      "bytes": 391
+    },
+    {
+      "operation": "GET /api/tickets (стр. 1, 20 шт.)",
+      "p50": 36.948632500752865,
+      "p95": 43.52671599917812,
+      "max": 46.422868999798084,
+      "server_ms": 34.42,
+      "db_ms": 18.025,
+      "code_ms": 16.395000000000003,
+      "queries": 22.0,
+      "bytes": 4919
+    },
+    {
+      "operation": "GET /api/tickets (status=new)",
+      "p50": 25.617590000365453,
+      "p95": 42.106107001018245,
+      "max": 42.33414500049548,
+      "server_ms": 23.655,
+      "db_ms": 12.719999999999999,
+      "code_ms": 10.935000000000002,
+      "queries": 21.0,
+      "bytes": 3533
+    },
+    {
+      "operation": "GET /api/tickets (стр. 10)",
+      "p50": 25.603346000934835,
+      "p95": 30.15687800143496,
+      "max": 30.329668001286336,
+      "server_ms": 23.84,
+      "db_ms": 12.440000000000001,
+      "code_ms": 11.399999999999999,
+      "queries": 24.0,
+      "bytes": 4782
+    },
+    {
+      "operation": "GET /api/tickets/{id}",
+      "p50": 12.666243499552365,
+      "p95": 16.75160699960543,
+      "max": 20.179342000119505,
+      "server_ms": 10.940000000000001,
+      "db_ms": 5.345000000000001,
+      "code_ms": 5.595000000000001,
+      "queries": 7.0,
+      "bytes": 1049
+    },
+    {
+      "operation": "GET /api/summary",
+      "p50": 109.31619050006702,
+      "p95": 138.17930000004708,
+      "max": 139.23827500002517,
+      "server_ms": 107.2,
+      "db_ms": 57.53,
+      "code_ms": 49.67,
+      "queries": 94.0,
+      "bytes": 741
+    },
+    {
+      "operation": "POST /api/tickets",
+      "p50": 10.524383000301896,
+      "p95": 12.371818000247004,
+      "max": 12.380783000480733,
+      "server_ms": 8.575,
+      "db_ms": 6.335,
+      "code_ms": 2.2399999999999993,
+      "queries": 3.0,
+      "bytes": 237
+    },
+    {
+      "operation": "POST /api/tickets/{id}/comments",
+      "p50": 14.053849000447372,
+      "p95": 18.86320099947625,
+      "max": 18.942874001368182,
+      "server_ms": 11.82,
+      "db_ms": 10.190000000000001,
+      "code_ms": 1.629999999999999,
+      "queries": 4.0,
+      "bytes": 166
+    },
+    {
+      "operation": "PATCH /api/tickets/{id}/status",
+      "p50": 15.145801499784284,
+      "p95": 24.90053200017428,
+      "max": 26.223742001093342,
+      "server_ms": 11.93,
+      "db_ms": 8.34,
+      "code_ms": 3.59,
+      "queries": 3.0,
+      "bytes": 33
+    }
+  ]
+}

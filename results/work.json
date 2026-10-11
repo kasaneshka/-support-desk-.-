@@ -1,0 +1,159 @@
+{
+  "label": "work",
+  "repeats": 20,
+  "account": "agent1",
+  "env": {
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cores": 12,
+    "memory_gb": 7.6,
+    "python": "3.14.4",
+    "postgres": "16.15",
+    "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "counts_before": {
+    "users": 3000,
+    "categories": 10,
+    "tickets": 75000,
+    "comments": 216189
+  },
+  "counts_after": {
+    "users": 3000,
+    "categories": 10,
+    "tickets": 75021,
+    "comments": 216210
+  },
+  "results": [
+    {
+      "operation": "POST /api/login",
+      "p50": 27.262069499556674,
+      "p95": 38.926868999624276,
+      "max": 54.98264599918912,
+      "server_ms": 25.04,
+      "db_ms": 1.21,
+      "code_ms": 23.83,
+      "queries": 1.0,
+      "bytes": 75
+    },
+    {
+      "operation": "GET /api/me",
+      "p50": 5.58202199954394,
+      "p95": 6.462576999183511,
+      "max": 6.847562000984908,
+      "server_ms": 3.5700000000000003,
+      "db_ms": 1.3650000000000002,
+      "code_ms": 2.205,
+      "queries": 1.0,
+      "bytes": 75
+    },
+    {
+      "operation": "POST /api/logout",
+      "p50": 2.604709500701574,
+      "p95": 3.046145999178407,
+      "max": 3.162551000059466,
+      "server_ms": 0.745,
+      "db_ms": 0.0,
+      "code_ms": 0.745,
+      "queries": 0.0,
+      "bytes": 0
+    },
+    {
+      "operation": "GET /api/categories",
+      "p50": 6.5542920001462335,
+      "p95": 7.7998809993005125,
+      "max": 7.89619299939659,
+      "server_ms": 4.675,
+      "db_ms": 1.915,
+      "code_ms": 2.76,
+      "queries": 2.0,
+      "bytes": 768
+    },
+    {
+      "operation": "GET /api/tickets (стр. 1, 20 шт.)",
+      "p50": 67.65118549992621,
+      "p95": 87.15961899906688,
+      "max": 93.32720800011884,
+      "server_ms": 64.85,
+      "db_ms": 44.425,
+      "code_ms": 20.424999999999997,
+      "queries": 33.0,
+      "bytes": 4804
+    },
+    {
+      "operation": "GET /api/tickets (status=new)",
+      "p50": 53.411927499837475,
+      "p95": 75.50965300106327,
+      "max": 78.47048499934317,
+      "server_ms": 51.055,
+      "db_ms": 34.370000000000005,
+      "code_ms": 16.684999999999995,
+      "queries": 31.0,
+      "bytes": 4752
+    },
+    {
+      "operation": "GET /api/tickets (стр. 10)",
+      "p50": 58.462948999476794,
+      "p95": 66.20220199874893,
+      "max": 72.61733400082448,
+      "server_ms": 56.41,
+      "db_ms": 39.870000000000005,
+      "code_ms": 16.539999999999992,
+      "queries": 32.0,
+      "bytes": 4814
+    },
+    {
+      "operation": "GET /api/tickets/{id}",
+      "p50": 11.924854499739013,
+      "p95": 16.842087999975774,
+      "max": 19.965191000665072,
+      "server_ms": 9.995000000000001,
+      "db_ms": 5.245,
+      "code_ms": 4.750000000000001,
+      "queries": 7.0,
+      "bytes": 1064
+    },
+    {
+      "operation": "GET /api/summary",
+      "p50": 20016.288928500217,
+      "p95": 22732.187781999528,
+      "max": 22884.682822001196,
+      "server_ms": 20013.415,
+      "db_ms": 10482.17,
+      "code_ms": 9531.245,
+      "queries": 17917.0,
+      "bytes": 1447
+    },
+    {
+      "operation": "POST /api/tickets",
+      "p50": 10.574836500381934,
+      "p95": 12.849440001446055,
+      "max": 13.383512001382769,
+      "server_ms": 8.59,
+      "db_ms": 6.5600000000000005,
+      "code_ms": 2.0299999999999994,
+      "queries": 3.0,
+      "bytes": 239
+    },
+    {
+      "operation": "POST /api/tickets/{id}/comments",
+      "p50": 12.385725499370892,
+      "p95": 13.870047001546482,
+      "max": 14.440520000789547,
+      "server_ms": 10.445,
+      "db_ms": 8.98,
+      "code_ms": 1.4649999999999999,
+      "queries": 4.0,
+      "bytes": 169
+    },
+    {
+      "operation": "PATCH /api/tickets/{id}/status",
+      "p50": 10.870744500607543,
+      "p95": 12.390350000714534,
+      "max": 16.689718000634457,
+      "server_ms": 8.845,
+      "db_ms": 6.390000000000001,
+      "code_ms": 2.455,
+      "queries": 3.0,
+      "bytes": 35
+    }
+  ]
+}
